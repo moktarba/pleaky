@@ -1,0 +1,17 @@
+{
+  "name": "pleaky",
+  "homepage": "https://github.com/moktarba/pleaky",
+  "authors": [
+    "moktarba <moktarba@hotmail.fr>"
+  ],
+  "description": "A template with dynamic dashbord by jquery",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
