@@ -3,4 +3,95 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-@import "compass/reset";
+@import "includes/variables";
+@import "includes/mixins";
+
+.container {
+
+    background: url(../images/background.png);
+    height: 750px;
+
+    .navbar {
+    color: #000;
+    font-family: $font-size;
+    font-size: 12px;
+    background-color: $color_menu_bar;
+
+    .logo {
+        margin: 10px 20px;
+        float: left;
+    }
+
+    .menu {
+        background-color: $color_menu_bar;
+        display: inline-block;
+        width: 100%;
+        float: left;
+        color: #fff;
+
+        .menu-left{
+            @include mobile {
+                float: right;
+            }
+            @include tablet {
+                .menu-left-list {
+                    display: none;
+                }
+            }
+        }
+
+        .menu-center {
+            margin: 0 150px 0px 0;
+
+            @include mobile {
+                display: none;
+            }
+            @include tablet {
+                display: none;
+            }
+        }
+
+        ul {
+            li {
+                float:left;
+                padding: 15px 20px;
+                list-style: none;
+            }
+        }
+
+        .menu-right{
+           float: right;
+           margin: 0;
+           
+
+           li {
+                &:first-child{
+                background-color: #fff;
+                color: blue;
+               }
+               &:nth-child(2){
+                background-color: blue;
+                color: #fff;
+               }
+            }
+
+            @include mobile {
+                display: none;
+            }
+             @include tablet {
+                display: block;
+            }
+
+        }
+    }
+}
+
+.sub_menu {
+    width: 100px;
+    color: #ddd;
+    background-color: #fff;
+    height: 20px;
+}
+
+}
+
